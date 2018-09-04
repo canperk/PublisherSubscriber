@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSAB.PubSub.CanPerk", "MSAB.PubSub.CanPerk\MSAB.PubSub.CanPerk.csproj", "{DC31B242-11A4-4082-95D1-BCD495E838BD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DC31B242-11A4-4082-95D1-BCD495E838BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC31B242-11A4-4082-95D1-BCD495E838BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC31B242-11A4-4082-95D1-BCD495E838BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC31B242-11A4-4082-95D1-BCD495E838BD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8F16E25C-FA17-4801-936A-4A08000E5555}
+	EndGlobalSection
+EndGlobal
