@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.28010.2016
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSAB.PubSub.CanPerk", "MSAB.PubSub.CanPerk\MSAB.PubSub.CanPerk.csproj", "{DC31B242-11A4-4082-95D1-BCD495E838BD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSAB.PubSub.CanPerk.Tests", "MSAB.PubSub.CanPerk.Tests\MSAB.PubSub.CanPerk.Tests.csproj", "{32F15EDB-A73D-4BBB-A46C-D46EF73679A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSAB.PubSub.CanPerk.Common", "MSAB.PubSub.CanPerk.Common\MSAB.PubSub.CanPerk.Common.csproj", "{AF5EAE74-17F0-456E-945F-AD26197AA66E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{DC31B242-11A4-4082-95D1-BCD495E838BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC31B242-11A4-4082-95D1-BCD495E838BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC31B242-11A4-4082-95D1-BCD495E838BD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32F15EDB-A73D-4BBB-A46C-D46EF73679A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32F15EDB-A73D-4BBB-A46C-D46EF73679A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32F15EDB-A73D-4BBB-A46C-D46EF73679A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32F15EDB-A73D-4BBB-A46C-D46EF73679A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF5EAE74-17F0-456E-945F-AD26197AA66E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF5EAE74-17F0-456E-945F-AD26197AA66E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF5EAE74-17F0-456E-945F-AD26197AA66E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF5EAE74-17F0-456E-945F-AD26197AA66E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

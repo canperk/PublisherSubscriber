@@ -1,0 +1,9 @@
+E:\Git\PublisherSubscriber\MSAB.PubSub.CanPerk\MSAB.PubSub.CanPerk.Common\bin\Debug\netstandard2.0\MSAB.PubSub.CanPerk.Common.deps.json
+E:\Git\PublisherSubscriber\MSAB.PubSub.CanPerk\MSAB.PubSub.CanPerk.Common\bin\Debug\netstandard2.0\MSAB.PubSub.CanPerk.Common.dll
+E:\Git\PublisherSubscriber\MSAB.PubSub.CanPerk\MSAB.PubSub.CanPerk.Common\bin\Debug\netstandard2.0\MSAB.PubSub.CanPerk.Common.pdb
+E:\Git\PublisherSubscriber\MSAB.PubSub.CanPerk\MSAB.PubSub.CanPerk.Common\obj\Debug\netstandard2.0\MSAB.PubSub.CanPerk.Common.csprojAssemblyReference.cache
+E:\Git\PublisherSubscriber\MSAB.PubSub.CanPerk\MSAB.PubSub.CanPerk.Common\obj\Debug\netstandard2.0\MSAB.PubSub.CanPerk.Common.csproj.CoreCompileInputs.cache
+E:\Git\PublisherSubscriber\MSAB.PubSub.CanPerk\MSAB.PubSub.CanPerk.Common\obj\Debug\netstandard2.0\MSAB.PubSub.CanPerk.Common.AssemblyInfoInputs.cache
+E:\Git\PublisherSubscriber\MSAB.PubSub.CanPerk\MSAB.PubSub.CanPerk.Common\obj\Debug\netstandard2.0\MSAB.PubSub.CanPerk.Common.AssemblyInfo.cs
+E:\Git\PublisherSubscriber\MSAB.PubSub.CanPerk\MSAB.PubSub.CanPerk.Common\obj\Debug\netstandard2.0\MSAB.PubSub.CanPerk.Common.dll
+E:\Git\PublisherSubscriber\MSAB.PubSub.CanPerk\MSAB.PubSub.CanPerk.Common\obj\Debug\netstandard2.0\MSAB.PubSub.CanPerk.Common.pdb

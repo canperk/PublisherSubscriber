@@ -1,0 +1,17 @@
+E:\Git\PublisherSubscriber\MSAB.PubSub.CanPerk\MSAB.PubSub.CanPerk.Tests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+E:\Git\PublisherSubscriber\MSAB.PubSub.CanPerk\MSAB.PubSub.CanPerk.Tests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+E:\Git\PublisherSubscriber\MSAB.PubSub.CanPerk\MSAB.PubSub.CanPerk.Tests\bin\Debug\netcoreapp2.1\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+E:\Git\PublisherSubscriber\MSAB.PubSub.CanPerk\MSAB.PubSub.CanPerk.Tests\bin\Debug\netcoreapp2.1\MSAB.PubSub.CanPerk.Tests.deps.json
+E:\Git\PublisherSubscriber\MSAB.PubSub.CanPerk\MSAB.PubSub.CanPerk.Tests\bin\Debug\netcoreapp2.1\MSAB.PubSub.CanPerk.Tests.runtimeconfig.json
+E:\Git\PublisherSubscriber\MSAB.PubSub.CanPerk\MSAB.PubSub.CanPerk.Tests\bin\Debug\netcoreapp2.1\MSAB.PubSub.CanPerk.Tests.runtimeconfig.dev.json
+E:\Git\PublisherSubscriber\MSAB.PubSub.CanPerk\MSAB.PubSub.CanPerk.Tests\bin\Debug\netcoreapp2.1\MSAB.PubSub.CanPerk.Tests.dll
+E:\Git\PublisherSubscriber\MSAB.PubSub.CanPerk\MSAB.PubSub.CanPerk.Tests\bin\Debug\netcoreapp2.1\MSAB.PubSub.CanPerk.Tests.pdb
+E:\Git\PublisherSubscriber\MSAB.PubSub.CanPerk\MSAB.PubSub.CanPerk.Tests\bin\Debug\netcoreapp2.1\MSAB.PubSub.CanPerk.Common.dll
+E:\Git\PublisherSubscriber\MSAB.PubSub.CanPerk\MSAB.PubSub.CanPerk.Tests\bin\Debug\netcoreapp2.1\MSAB.PubSub.CanPerk.Common.pdb
+E:\Git\PublisherSubscriber\MSAB.PubSub.CanPerk\MSAB.PubSub.CanPerk.Tests\obj\Debug\netcoreapp2.1\MSAB.PubSub.CanPerk.Tests.csprojAssemblyReference.cache
+E:\Git\PublisherSubscriber\MSAB.PubSub.CanPerk\MSAB.PubSub.CanPerk.Tests\obj\Debug\netcoreapp2.1\MSAB.PubSub.CanPerk.Tests.csproj.CoreCompileInputs.cache
+E:\Git\PublisherSubscriber\MSAB.PubSub.CanPerk\MSAB.PubSub.CanPerk.Tests\obj\Debug\netcoreapp2.1\MSAB.PubSub.CanPerk.Tests.AssemblyInfoInputs.cache
+E:\Git\PublisherSubscriber\MSAB.PubSub.CanPerk\MSAB.PubSub.CanPerk.Tests\obj\Debug\netcoreapp2.1\MSAB.PubSub.CanPerk.Tests.AssemblyInfo.cs
+E:\Git\PublisherSubscriber\MSAB.PubSub.CanPerk\MSAB.PubSub.CanPerk.Tests\obj\Debug\netcoreapp2.1\MSAB.PubSub.CanPerk.Tests.csproj.CopyComplete
+E:\Git\PublisherSubscriber\MSAB.PubSub.CanPerk\MSAB.PubSub.CanPerk.Tests\obj\Debug\netcoreapp2.1\MSAB.PubSub.CanPerk.Tests.dll
+E:\Git\PublisherSubscriber\MSAB.PubSub.CanPerk\MSAB.PubSub.CanPerk.Tests\obj\Debug\netcoreapp2.1\MSAB.PubSub.CanPerk.Tests.pdb

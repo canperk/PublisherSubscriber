@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace MSAB.PubSub.CanPerk.Abstractions
+namespace MSAB.PubSub.CanPerk.Common.Abstractions
 {
     public interface IMessage
     {
