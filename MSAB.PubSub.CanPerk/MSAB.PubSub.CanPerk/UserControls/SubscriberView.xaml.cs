@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MSAB.PubSub.CanPerk.Common;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -39,6 +40,14 @@ namespace MSAB.PubSub.CanPerk.UserControls
         {
             get { return GetValue(MessageProperty).ToString(); }
             set { SetValue(MessageProperty, value); }
+        }
+
+        public static readonly DependencyProperty TypeProperty = DependencyProperty.Register("Type", typeof(SubscriberType), typeof(SubscriberView), new FrameworkPropertyMetadata(SubscriberType.Newspaper));
+
+        public SubscriberType Type
+        {
+            get { return (SubscriberType)GetValue(TypeProperty); }
+            set { SetValue(TypeProperty, value); }
         }
     }
 }

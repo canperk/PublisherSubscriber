@@ -1,8 +1,11 @@
-﻿<Application x:Class="MSAB.PubSub.CanPerk.App"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:MSAB.PubSub.CanPerk"
-             StartupUri="MainWindow.xaml">
+<Application
+    x:Class="MSAB.PubSub.CanPerk.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:d1p1="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    d1p1:Ignorable="d"
+    StartupUri="MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
@@ -10,7 +13,13 @@
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Red.xaml" />
                 <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Amber.xaml" />
+
             </ResourceDictionary.MergedDictionaries>
+            <vm:ViewModelLocator
+                xmlns:vm="clr-namespace:MSAB.PubSub.CanPerk.ViewModels"
+                x:Key="Locator"
+                d:IsDataSource="True" />
         </ResourceDictionary>
+
     </Application.Resources>
 </Application>

@@ -6,11 +6,11 @@
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:msabuc="clr-namespace:MSAB.PubSub.CanPerk.UserControls"
-    Title="MainWindow"
     Width="900"
     Height="600"
     AllowsTransparency="True"
     Background="{DynamicResource MaterialDesignPaper}"
+    DataContext="{Binding Main, Source={StaticResource Locator}}"
     FontFamily="{StaticResource MaterialDesignFont}"
     ResizeMode="NoResize"
     WindowStartupLocation="CenterScreen"
@@ -40,12 +40,15 @@
                     ToolTip="Minimize">
                     <materialDesign:PackIcon Kind="Minus" />
                 </Button>
-                <TextBlock
-                    Margin="10,0,0,0"
-                    VerticalAlignment="Center"
-                    Style="{DynamicResource MaterialDesignTitleTextBlock}">
-                    News Publisher - Can PERK
-                </TextBlock>
+                <StackPanel>
+                    <TextBlock VerticalAlignment="Center" Style="{DynamicResource MaterialDesignTitleTextBlock}">
+                        News Publisher - Can PERK
+                    </TextBlock>
+                    <TextBlock Style="{DynamicResource MaterialDesignSubheadingTextBlock}">
+                        Published Message Count :
+                        <TextBlock Text="{Binding MessageCount}" />
+                    </TextBlock>
+                </StackPanel>
             </DockPanel>
         </materialDesign:ColorZone>
         <Grid Grid.Row="1" VerticalAlignment="Center">
@@ -55,19 +58,26 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <msabuc:SubscriberView Title="Newspaper" Message="Add a subscriber that is only for newspaper reader" />
+            <msabuc:SubscriberView
+                Title="Newspaper"
+                Grid.Column="0"
+                Message="Add a subscriber that is only for newspaper reader"
+                Type="Newspaper" />
             <msabuc:SubscriberView
                 Title="Radio"
                 Grid.Column="1"
-                Message="Add a subscriber that is only for radio listeners" />
+                Message="Add a subscriber that is only for radio listeners"
+                Type="Radio" />
             <msabuc:SubscriberView
                 Title="Mobile Device"
                 Grid.Column="2"
-                Message="Add a subscriber that is for new generation users" />
+                Message="Add a subscriber that is for new generation users"
+                Type="MobileDevice" />
             <msabuc:SubscriberView
                 Title="Internet"
                 Grid.Column="3"
-                Message="Add a subscriber that is using world wide web" />
+                Message="Add a subscriber that is using world wide web"
+                Type="Internet" />
         </Grid>
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
@@ -77,7 +87,7 @@
             <GroupBox
                 Grid.Column="0"
                 Margin="10"
-                Header="Announcement"
+                Header="Announcements"
                 Style="{DynamicResource MaterialDesignCardGroupBox}">
                 <GroupBox.HeaderTemplate>
                     <DataTemplate>
@@ -103,6 +113,7 @@
                                 Grid.Column="2"
                                 Width="100"
                                 HorizontalAlignment="Right"
+                                Command="{Binding Path=DataContext.PublishAnnouncement, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=GroupBox}}"
                                 Style="{StaticResource MaterialDesignRaisedAccentButton}">
                                 Publish
                             </Button>
@@ -113,7 +124,8 @@
                     <TextBox
                         Margin="5"
                         materialDesign:HintAssist.Hint="Title"
-                        Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                        Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                        Text="{Binding Announcement.Title, Mode=TwoWay}" />
                     <TextBox
                         Height="80"
                         MinWidth="280"
@@ -121,6 +133,7 @@
                         materialDesign:HintAssist.Hint="Content"
                         AcceptsReturn="True"
                         SpellCheck.IsEnabled="True"
+                        Text="{Binding Announcement.Content, Mode=TwoWay}"
                         TextWrapping="Wrap"
                         VerticalScrollBarVisibility="Auto" />
                 </StackPanel>
@@ -154,6 +167,7 @@
                                 Grid.Column="2"
                                 Width="100"
                                 HorizontalAlignment="Right"
+                                Command="{Binding Path=DataContext.PublishNews, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=GroupBox}}"
                                 Style="{StaticResource MaterialDesignRaisedAccentButton}">
                                 Publish
                             </Button>
@@ -164,7 +178,8 @@
                     <TextBox
                         Margin="5"
                         materialDesign:HintAssist.Hint="Title"
-                        Style="{StaticResource MaterialDesignFloatingHintTextBox}" />
+                        Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                        Text="{Binding News.Title, Mode=TwoWay}" />
                     <ComboBox
                         Margin="5"
                         materialDesign:HintAssist.Hint="Category"
@@ -181,6 +196,7 @@
                         materialDesign:HintAssist.Hint="Content"
                         AcceptsReturn="True"
                         SpellCheck.IsEnabled="True"
+                        Text="{Binding News.Content, Mode=TwoWay}"
                         TextWrapping="Wrap"
                         VerticalScrollBarVisibility="Auto" />
                 </StackPanel>

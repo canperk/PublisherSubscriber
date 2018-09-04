@@ -1,5 +1,5 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using MSAB.PubSub.CanPerk.Common.Concretes;
+using MSAB.PubSub.CanPerk.Common;
 
 namespace MSAB.PubSub.CanPerk.Tests
 {
@@ -16,7 +16,7 @@ namespace MSAB.PubSub.CanPerk.Tests
             publisher.AddSubscriber(subscriber1);
             publisher.AddSubscriber(subscriber2);
 
-            var message = new Message
+            var message = new Message(MessageType.Announcement)
             {
                 Title = "Test Message",
                 Content = "Lorem ipsum dolor sit amelur..."

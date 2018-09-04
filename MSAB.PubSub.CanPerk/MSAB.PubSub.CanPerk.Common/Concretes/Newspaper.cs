@@ -1,9 +1,7 @@
 ﻿using MSAB.PubSub.CanPerk.Common.Abstractions;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
-namespace MSAB.PubSub.CanPerk.Common.Concretes
+namespace MSAB.PubSub.CanPerk.Common
 {
     public class Newspaper : ISubscriber
     {

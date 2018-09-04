@@ -7,5 +7,6 @@ namespace MSAB.PubSub.CanPerk.Common.Abstractions
         string Title { get; set; }
         string Content { get; set; }
         DateTime PublishDate { get; set; }
+        MessageType MessageType { get; set; }
     }
 }

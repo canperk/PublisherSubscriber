@@ -4,7 +4,7 @@ namespace MSAB.PubSub.CanPerk.Common.Abstractions
 {
     public interface IPublisher
     {
-        int MessageCount { get; set; }
+        int MessageCount { get; }
         event PublishHandler OnMessagePublished;
         void AddSubscriber(ISubscriber subscriber);
         void Publish(IMessage message);

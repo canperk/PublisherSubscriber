@@ -1,4 +1,4 @@
-﻿namespace MSAB.PubSub.CanPerk
+﻿namespace MSAB.PubSub.CanPerk.Common
 {
     public enum SubscriberType
     {

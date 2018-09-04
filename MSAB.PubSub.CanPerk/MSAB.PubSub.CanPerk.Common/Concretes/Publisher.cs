@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace MSAB.PubSub.CanPerk.Common.Concretes
+namespace MSAB.PubSub.CanPerk.Common
 {
     public class Publisher : IPublisher
     {
@@ -13,7 +13,7 @@ namespace MSAB.PubSub.CanPerk.Common.Concretes
         private List<IMessage> messages;
         public IReadOnlyCollection<IMessage> Messages { get { return messages.AsReadOnly(); } }
 
-        public int MessageCount { get; set; }
+        public int MessageCount { get { return messages.Count; } }
 
         public event PublishHandler OnMessagePublished;
 
@@ -21,7 +21,6 @@ namespace MSAB.PubSub.CanPerk.Common.Concretes
         {
             subscriber.JoinDate = DateTime.Now;
             OnMessagePublished += subscriber.MessageRecieved;
-            MessageCount++;
         }
 
         public void Publish(IMessage message)
