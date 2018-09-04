@@ -61,6 +61,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Abstractions\IMessage.cs" />
+    <Compile Include="Abstractions\IPublisher.cs" />
+    <Compile Include="Concretes\Message.cs" />
+    <Compile Include="Enums\SubscriberType.cs" />
     <Compile Include="UserControls\SubscriberView.xaml.cs">
       <DependentUpon>SubscriberView.xaml</DependentUpon>
     </Compile>
@@ -108,5 +112,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
