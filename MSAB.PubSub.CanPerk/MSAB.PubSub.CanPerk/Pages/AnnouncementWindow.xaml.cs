@@ -1,25 +1,28 @@
 ﻿using MSAB.PubSub.CanPerk.Common;
 using MSAB.PubSub.CanPerk.Common.Abstractions;
-using System;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Input;
 
 namespace MSAB.PubSub.CanPerk.Pages
 {
-    public partial class SubscriberWindow : Window
+    public partial class AnnouncementWindow : Window
     {
-        public ISubscriber Subscriber { get; }
-        public SubscriberType SubscriberType { get; }
+        private readonly IPublisher publisher;
 
-        public SubscriberWindow(IPublisher publisher, SubscriberType subscriberType)
+        public ISubscriber Subscriber { get; }
+
+        public AnnouncementWindow(IPublisher publisher)
         {
             InitializeComponent();
             Messages = new ObservableCollection<string>();
-            SubscriberType = subscriberType;
-            Subscriber = new ClientSubscriber(Messages);
+            Subscriber = new AnnouncementSubscriber(Messages)
+            {
+                SubscriberType = SubscriberType.Announcement
+            };
             publisher.AddSubscriber(Subscriber);
             DataContext = this;
+            this.publisher = publisher;
         }
         public ObservableCollection<string> Messages { get; set; }
         private void Subscriber_MessageRecieved(IMessage message)
@@ -27,8 +30,9 @@ namespace MSAB.PubSub.CanPerk.Pages
             Messages.Add(message.Title);
         }
 
-        private void ExitApp(object sender, RoutedEventArgs e)
+        private void CloseForm(object sender, RoutedEventArgs e)
         {
+            publisher.RemoveSubscriber(Subscriber);
             Close();
         }
 
@@ -43,22 +47,6 @@ namespace MSAB.PubSub.CanPerk.Pages
                 DragMove();
         }
 
-        class ClientSubscriber : ISubscriber
-        {
-            private readonly ObservableCollection<string> messages;
-
-            public ClientSubscriber(ObservableCollection<string> messages)
-            {
-                this.messages = messages;
-                UniqueKey = Guid.NewGuid();
-            }
-            public DateTime JoinDate { get; set; }
-            public Guid UniqueKey { get; set; }
-
-            public void MessageRecieved(IMessage message)
-            {
-                messages.Add(message.Title);
-            }
-        }
+        
     }
 }

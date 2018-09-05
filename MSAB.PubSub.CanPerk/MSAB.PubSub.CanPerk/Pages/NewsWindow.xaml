@@ -1,5 +1,5 @@
 ﻿<Window
-    x:Class="MSAB.PubSub.CanPerk.Pages.SubscriberWindow"
+    x:Class="MSAB.PubSub.CanPerk.Pages.NewsWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -20,10 +20,10 @@
             MouseDown="DragWindow">
             <DockPanel>
                 <Button
-                    Click="ExitApp"
+                    Click="CloseForm"
                     DockPanel.Dock="Right"
                     ToolTip="Close">
-                    <materialDesign:PackIcon Kind="ExitToApp" />
+                    <materialDesign:PackIcon Kind="Close" />
                 </Button>
                 <Button
                     Margin="0,0,5,0"
@@ -34,7 +34,8 @@
                 </Button>
                 <StackPanel>
                     <TextBlock VerticalAlignment="Center" Style="{DynamicResource MaterialDesignTitleTextBlock}">
-                        Subscriber : Newspaper
+                        Subscriber :
+                        <TextBlock Text="{Binding Path=Subscriber.SubscriberType}" />
                     </TextBlock>
                     <TextBlock Style="{DynamicResource MaterialDesignCaptionTextBlock}">
                         Subscribtion Id :

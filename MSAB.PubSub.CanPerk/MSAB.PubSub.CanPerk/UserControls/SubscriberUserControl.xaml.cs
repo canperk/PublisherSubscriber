@@ -29,14 +29,6 @@ namespace MSAB.PubSub.CanPerk.UserControls
             set { SetValue(MessageProperty, value); }
         }
 
-        public static readonly DependencyProperty TypeProperty = DependencyProperty.Register("Type", typeof(SubscriberType), typeof(SubscriberUserControl), new FrameworkPropertyMetadata(SubscriberType.Newspaper));
-
-        public SubscriberType Type
-        {
-            get { return (SubscriberType)GetValue(TypeProperty); }
-            set { SetValue(TypeProperty, value); }
-        }
-
         public static readonly DependencyProperty CommandProperty = DependencyProperty.Register("Command", typeof(ICommand), typeof(SubscriberUserControl), new UIPropertyMetadata(null));
 
         public ICommand Command

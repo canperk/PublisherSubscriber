@@ -45,10 +45,16 @@
                     <TextBlock VerticalAlignment="Center" Style="{DynamicResource MaterialDesignTitleTextBlock}">
                         News Publisher - Can PERK
                     </TextBlock>
-                    <TextBlock Style="{DynamicResource MaterialDesignSubheadingTextBlock}">
-                        Published Message Count :
-                        <TextBlock Text="{Binding MessageCount}" />
-                    </TextBlock>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Style="{DynamicResource MaterialDesignSubheadingTextBlock}">
+                            Published Message Count :
+                            <TextBlock Text="{Binding MessageCount}" />
+                        </TextBlock>
+                        <TextBlock Margin="10,0,0,0" Style="{DynamicResource MaterialDesignSubheadingTextBlock}">
+                            Subscriber Count :
+                            <TextBlock Text="{Binding SubscriberCount}" />
+                        </TextBlock>
+                    </StackPanel>
                 </StackPanel>
             </DockPanel>
         </materialDesign:ColorZone>
@@ -56,33 +62,19 @@
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
                 <ColumnDefinition />
-                <ColumnDefinition />
-                <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <msabuc:SubscriberUserControl
-                Title="Newspaper"
+                Title="Announcement Subscribers Section"
                 Grid.Column="0"
-                Command="{Binding Path=DataContext.AddNewsPaper, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
-                Message="Add a subscriber that is only for newspaper reader"
-                Type="Newspaper" />
+                Margin="10"
+                Command="{Binding Path=DataContext.AddAnnouncementSubscriber, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
+                Message="Add an announcement subscriber in order to make listeners notify for important announces" />
             <msabuc:SubscriberUserControl
-                Title="Radio"
+                Title="News Subscribers Section"
                 Grid.Column="1"
-                Command="{Binding Path=DataContext.AddRadio, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
-                Message="Add a subscriber that is only for radio listeners"
-                Type="Radio" />
-            <msabuc:SubscriberUserControl
-                Title="Mobile Device"
-                Grid.Column="2"
-                Command="{Binding Path=DataContext.AddMobileDevice, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
-                Message="Add a subscriber that is for new generation users"
-                Type="MobileDevice" />
-            <msabuc:SubscriberUserControl
-                Title="Internet"
-                Grid.Column="3"
-                Command="{Binding Path=DataContext.AddInternet, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
-                Message="Add a subscriber that is using world wide web"
-                Type="Internet" />
+                Margin="10"
+                Command="{Binding Path=DataContext.AddNewsSubscriber, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
+                Message="Add a news subscriber in order to make people get the news immediately for their information" />
         </Grid>
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
@@ -188,12 +180,9 @@
                     <ComboBox
                         Margin="5"
                         materialDesign:HintAssist.Hint="Category"
-                        Style="{StaticResource MaterialDesignFloatingHintComboBox}">
-                        <ComboBoxItem>Economy</ComboBoxItem>
-                        <ComboBoxItem>Sport</ComboBoxItem>
-                        <ComboBoxItem>Politics</ComboBoxItem>
-                        <ComboBoxItem>Travelling</ComboBoxItem>
-                    </ComboBox>
+                        ItemsSource="{Binding News.Categories}"
+                        SelectedItem="{Binding News.Category}"
+                        Style="{StaticResource MaterialDesignFloatingHintComboBox}" />
                     <TextBox
                         Height="80"
                         MinWidth="280"
@@ -207,6 +196,16 @@
                 </StackPanel>
             </GroupBox>
         </Grid>
-
+        <materialDesign:DialogHost
+            Grid.RowSpan="3"
+            Grid.ColumnSpan="2"
+            IsOpen="{Binding IsDialogOpen}">
+            <materialDesign:DialogHost.DialogContent>
+                <StackPanel>
+                    <TextBlock Margin="20" Text="{Binding NotFoundMessage}" />
+                    <Button Width="100" Margin="10" Command="{Binding CloseDialog}">Close</Button>
+                </StackPanel>
+            </materialDesign:DialogHost.DialogContent>
+        </materialDesign:DialogHost>
     </Grid>
 </Window>

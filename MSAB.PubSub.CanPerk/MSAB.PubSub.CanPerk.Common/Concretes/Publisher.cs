@@ -6,28 +6,68 @@ namespace MSAB.PubSub.CanPerk.Common
 {
     public class Publisher : IPublisher
     {
-        public Publisher()
-        {
-            messages = new List<IMessage>();
-        }
-        private List<IMessage> messages;
-        public IReadOnlyCollection<IMessage> Messages { get { return messages.AsReadOnly(); } }
+        private List<ISubscriber> subscribers = new List<ISubscriber>();
 
-        public int MessageCount { get { return messages.Count; } }
+        public int MessageCount { get; set; }
 
-        public event PublishHandler OnMessagePublished;
+        public IReadOnlyCollection<ISubscriber> Subscribers => subscribers.AsReadOnly();
+
+        public event PublishHandler OnAnnouncementPublished;
+        public event PublishHandler OnNewsPublished;
+        public event SubscriberHandler OnUnsubscribed;
+        public event SubscriberHandler OnSubscribed;
 
         public void AddSubscriber(ISubscriber subscriber)
         {
             subscriber.JoinDate = DateTime.Now;
-            OnMessagePublished += subscriber.MessageRecieved;
+            subscribers.Add(subscriber);
+            switch (subscriber.SubscriberType)
+            {
+                case SubscriberType.Announcement:
+                    OnAnnouncementPublished += subscriber.MessageRecieved;
+                    break;
+                case SubscriberType.News:
+                    OnNewsPublished += subscriber.MessageRecieved;
+                    break;
+            }
+            OnSubscribed?.Invoke(subscriber);
         }
 
-        public void Publish(IMessage message)
+        public void RemoveSubscriber(ISubscriber subscriber)
         {
+            subscribers.Remove(subscriber);
+            switch (subscriber.SubscriberType)
+            {
+                case SubscriberType.Announcement:
+                    OnAnnouncementPublished -= subscriber.MessageRecieved;
+                    break;
+                case SubscriberType.News:
+                    OnNewsPublished -= subscriber.MessageRecieved;
+                    break;
+            }
+            OnUnsubscribed?.Invoke(subscriber);
+        }
+
+        public void PublishAnnouncement(IMessage message)
+        {
+            if (message.MessageType != MessageType.Announcement)
+            {
+                return;
+            }
             message.PublishDate = DateTime.Now;
-            OnMessagePublished?.Invoke(message);
-            messages.Add(message);
+            OnAnnouncementPublished?.Invoke(message);
+            MessageCount++;
+        }
+
+        public void PublishNews(IMessage message)
+        {
+            if (message.MessageType != MessageType.News)
+            {
+                return;
+            }
+            message.PublishDate = DateTime.Now;
+            OnNewsPublished?.Invoke(message);
+            MessageCount++;
         }
     }
 }
