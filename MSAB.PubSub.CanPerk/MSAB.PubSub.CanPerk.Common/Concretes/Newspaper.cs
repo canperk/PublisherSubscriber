@@ -26,6 +26,7 @@ namespace MSAB.PubSub.CanPerk.Common
         }
         public DateTime JoinDate { get; set; }
         public Guid UniqueKey { get; set; }
+        public SubscriberType SubscriberType { get; set; }
 
         public void MessageRecieved(IMessage message)
         {

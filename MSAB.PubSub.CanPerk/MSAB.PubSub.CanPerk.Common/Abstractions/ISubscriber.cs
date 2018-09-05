@@ -6,6 +6,7 @@ namespace MSAB.PubSub.CanPerk.Common.Abstractions
     {
         DateTime JoinDate { get; set; }
         Guid UniqueKey { get; set; }
+        SubscriberType SubscriberType { get; set; }
         void MessageRecieved(IMessage message);
     }
 }

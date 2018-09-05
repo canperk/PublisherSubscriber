@@ -12,7 +12,7 @@ namespace MSAB.PubSub.CanPerk
 
         private void ExitApp(object sender, RoutedEventArgs e)
         {
-            Close();
+            Application.Current.Shutdown();
         }
 
         private void Minimize(object sender, RoutedEventArgs e)

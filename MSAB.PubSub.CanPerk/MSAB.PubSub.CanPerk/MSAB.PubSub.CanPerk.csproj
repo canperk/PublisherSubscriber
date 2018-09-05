@@ -76,8 +76,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="UserControls\SubscriberView.xaml.cs">
-      <DependentUpon>SubscriberView.xaml</DependentUpon>
+    <Compile Include="Pages\SubscriberWindow.xaml.cs">
+      <DependentUpon>SubscriberWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\SubscriberUserControl.xaml.cs">
+      <DependentUpon>SubscriberUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\AnnouncementViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
@@ -95,7 +98,11 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="UserControls\SubscriberView.xaml">
+    <Page Include="Pages\SubscriberWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\SubscriberUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

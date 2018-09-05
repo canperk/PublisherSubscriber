@@ -1,11 +1,11 @@
 ﻿<UserControl
-    x:Class="MSAB.PubSub.CanPerk.UserControls.SubscriberView"
+    x:Class="MSAB.PubSub.CanPerk.UserControls.SubscriberUserControl"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    DataContext="{Binding RelativeSource={RelativeSource Self}}"
+    x:Name="addSubscriber"
     mc:Ignorable="d">
     <materialDesign:Card Width="200">
         <Grid>
@@ -20,9 +20,10 @@
                 TextAlignment="Center" />
             <Button
                 Grid.Row="0"
-                Margin="0,0,16,-20"
+                Margin="0,0,16,-10"
                 HorizontalAlignment="Right"
                 VerticalAlignment="Bottom"
+                Command="{Binding Command, ElementName=addSubscriber}"
                 Style="{StaticResource MaterialDesignFloatingActionMiniAccentButton}"
                 ToolTip="Add">
                 <materialDesign:PackIcon Kind="Plus" />

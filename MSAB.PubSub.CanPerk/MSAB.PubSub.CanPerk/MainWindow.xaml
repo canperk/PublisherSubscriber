@@ -6,6 +6,7 @@
     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:msabuc="clr-namespace:MSAB.PubSub.CanPerk.UserControls"
+    xmlns:vm="clr-namespace:MSAB.PubSub.CanPerk.ViewModels"
     Width="900"
     Height="600"
     AllowsTransparency="True"
@@ -58,24 +59,28 @@
                 <ColumnDefinition />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
-            <msabuc:SubscriberView
+            <msabuc:SubscriberUserControl
                 Title="Newspaper"
                 Grid.Column="0"
+                Command="{Binding Path=DataContext.AddNewsPaper, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
                 Message="Add a subscriber that is only for newspaper reader"
                 Type="Newspaper" />
-            <msabuc:SubscriberView
+            <msabuc:SubscriberUserControl
                 Title="Radio"
                 Grid.Column="1"
+                Command="{Binding Path=DataContext.AddRadio, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
                 Message="Add a subscriber that is only for radio listeners"
                 Type="Radio" />
-            <msabuc:SubscriberView
+            <msabuc:SubscriberUserControl
                 Title="Mobile Device"
                 Grid.Column="2"
+                Command="{Binding Path=DataContext.AddMobileDevice, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
                 Message="Add a subscriber that is for new generation users"
                 Type="MobileDevice" />
-            <msabuc:SubscriberView
+            <msabuc:SubscriberUserControl
                 Title="Internet"
                 Grid.Column="3"
+                Command="{Binding Path=DataContext.AddInternet, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
                 Message="Add a subscriber that is using world wide web"
                 Type="Internet" />
         </Grid>

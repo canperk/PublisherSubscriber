@@ -23,7 +23,7 @@ namespace MSAB.PubSub.CanPerk.Tests
             };
 
             publisher.Publish(message);
-            Assert.AreEqual(2, publisher.MessageCount);
+            Assert.AreEqual(1, publisher.MessageCount);
         }
     }
 }
